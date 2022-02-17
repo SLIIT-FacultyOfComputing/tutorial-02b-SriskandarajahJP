@@ -27,3 +27,42 @@ int main() {
   std::cout << std::endl;
   return 0;
 }
+long Factorial(int no)
+{
+   int fac;
+    for (int r=no; r >= 1; r--) {
+        fac = fac * r;
+    }
+  return fac;
+}
+long nCr(int n, int r)
+{
+  int i, fact, numerator, sub, denominator,comb;
+  while(i<=n)
+    {
+        fact = i*fact;
+        i++;
+    }
+    numerator = fact;                    
+    sub = n-r;
+    fact = 1;
+    i = 1;
+    while(i<=sub)
+    {
+        fact = i*fact;
+        i++;
+    }
+    denominator = fact;             
+    fact = 1;
+    i = 1;
+    while(i<=r)
+    {
+        fact = i*fact;
+        i++;
+    }
+     denominator = (fact*denominator);
+    comb = numerator/denominator;
+
+    return comb;
+}
+ 
